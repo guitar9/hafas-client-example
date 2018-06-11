@@ -11,9 +11,9 @@ import {
   Text,
   View
 } from 'react-native';
-const createClient = require('hafas-client')
-const dbProfile = require('hafas-client/p/db')
-const client = createClient(dbProfile)
+ const createClient = require('hafas-client')
+// const dbProfile = require('hafas-client/p/db')
+// const client = createClient(dbProfile)
 
 
 const münchenHbf = {
@@ -48,14 +48,14 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   componentDidMount(){
-    client.journeys(münchenHbf, münchenPassing)
-    .then((response)=>{
-      console.log('===============response=====================');
-      console.log(response);
-      console.log('====================================');
+    // client.journeys(münchenHbf, münchenPassing)
+    // .then((response)=>{
+    //   console.log('===============response=====================');
+    //   console.log(response);
+    //   console.log('====================================');
 
-    })
-    .catch(console.error)
+    // })
+    // .catch(console.error)
   }
   render() {
     return (
